@@ -47,7 +47,7 @@
 <div class="wrap">
   <h1>PRGF — Monitoring DFT</h1>
   <p class="sub" id="upd">Memuat data…</p>
-  <p class="sub">Data diperbarui otomatis tiap 15 menit dari 4 mesin (VPS, Mac Mini, SOEGI-LAB, serverfisika). Persen = perkiraan dari langkah BFGS / iterasi SCF, bukan angka resmi QE.</p>
+  <p class="sub">Data diperbarui otomatis tiap 15 menit dari 5 mesin: 4 mesin DFT (VPS, Mac Mini, SOEGI-LAB, serverfisika) + Muse (analisis, sampel latih, monitor). Persen = perkiraan dari langkah BFGS / iterasi SCF, bukan angka resmi QE.</p>
   <div id="banner"></div>
   <div class="grid" id="ringkasan"></div>
   <div id="mesin"></div>
@@ -100,7 +100,7 @@ function tampil(s) {
     if (m.load) mh += '<div class="mut">Beban: ' + esc(String(m.load).split(' ').slice(0, 3).join(' ')) + '</div>';
     if (!m.reachable) {
       mh += '<div class="mut">SSH gagal pada pembaruan terakhir — data job tidak tersedia.</div>';
-    } else if (!m.running.length) {
+    } else if (!m.running.length && !(m.tasks && m.tasks.length)) {
       mh += '<div class="mut">Tidak ada job pw.x yang jalan.</div>';
     }
     m.running.forEach(function(r) {
@@ -112,6 +112,14 @@ function tampil(s) {
         + '<span>' + (r.bfgs != null ? 'BFGS ' + r.bfgs : 'SCF ' + r.scf_total + ' iterasi') + '</span>'
         + '<span>CPU ' + esc(String(r.cpu)) + '%</span></div></div>';
     });
+    if (m.tasks && m.tasks.length) {
+      m.tasks.forEach(function(t) {
+        var cls = t.status === 'selesai' ? 'done' : (t.status === 'jalan' ? 'run' : 'off');
+        mh += '<div class="runjob"><div><span class="job">' + esc(t.task) + '</span>'
+          + '<span class="pill ' + cls + '">' + esc(t.status) + (t.pct != null ? ' ' + t.pct + '%' : '') + '</span></div>'
+          + (t.note ? '<div class="row"><span>' + esc(t.note) + '</span></div>' : '') + '</div>';
+      });
+    }
     if (m.warn && m.warn.length) {
       mh += '<div class="mut" style="margin-top:8px">' + esc(m.warn.join('; ')) + '</div>';
     }

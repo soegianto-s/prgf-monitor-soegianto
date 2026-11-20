@@ -1,21 +1,21 @@
 {
-  "updated_at_wib": "2026-11-20 11:41 WIB",
-  "updated_at_unix": 1795149685,
+  "updated_at_wib": "2026-11-20 13:32 WIB",
+  "updated_at_unix": 1795156359,
   "machines": [
     {
       "id": "vps",
       "name": "VPS",
       "reachable": true,
-      "load": "10.29 10.12 10.05 12/1233 3712559",
+      "load": "10.00 10.00 10.04 11/1229 3749447",
       "warn": [],
       "running": [
         {
           "job": "r2_27_Ca4F3Mg4O17P4",
           "queue": "r2",
           "pid": "3080851",
-          "elapsed_s": 115178,
-          "elapsed": "1 hari 7j 59mnt",
-          "cpu": "591",
+          "elapsed_s": 121852,
+          "elapsed": "1 hari 9j 50mnt",
+          "cpu": "590",
           "bfgs": 12,
           "scf_total": 208,
           "last_iter": "iteration # 8 ecut= 80.00 Ry beta= 0.70",
@@ -27,15 +27,15 @@
           "job": "r1b_04_CCa20H2O53P12",
           "queue": "r1b",
           "pid": "3517997",
-          "elapsed_s": 35070,
-          "elapsed": "9j 44mnt",
+          "elapsed_s": 41743,
+          "elapsed": "11j 35mnt",
           "cpu": "183",
           "bfgs": 2,
-          "scf_total": 109,
-          "last_iter": "iteration # 7 ecut= 80.00 Ry beta= 0.70",
+          "scf_total": 130,
+          "last_iter": "iteration # 28 ecut= 80.00 Ry beta= 0.70",
           "pct": 14,
           "stale": false,
-          "out_mtime": 1795149383
+          "out_mtime": 1795156268
         }
       ]
     },
@@ -43,36 +43,36 @@
       "id": "mac",
       "name": "Mac Mini M1",
       "reachable": true,
-      "load": "6.89 6.98 7.72",
+      "load": "6.77 8.97 9.80",
       "warn": [],
       "running": [
         {
           "job": "r2_22_Ca9F2NdO24P5Si",
           "queue": "r2",
           "pid": "4221",
-          "elapsed_s": 73411,
-          "elapsed": "20j 23mnt",
-          "cpu": "199.3",
+          "elapsed_s": 80086,
+          "elapsed": "22j 14mnt",
+          "cpu": "211.3",
           "bfgs": null,
-          "scf_total": 19,
-          "last_iter": "iteration # 19 ecut= 80.00 Ry beta= 0.70",
-          "pct": 13,
+          "scf_total": 21,
+          "last_iter": "iteration # 21 ecut= 80.00 Ry beta= 0.70",
+          "pct": 14,
           "stale": false,
-          "out_mtime": 1795146877
+          "out_mtime": 1795153974
         },
         {
           "job": "r1b_06_Ca3EuFNaO12P3_sp",
           "queue": "r1b",
           "pid": "14566",
-          "elapsed_s": 32142,
-          "elapsed": "8j 55mnt",
-          "cpu": "197.5",
+          "elapsed_s": 38817,
+          "elapsed": "10j 46mnt",
+          "cpu": "198.3",
           "bfgs": null,
-          "scf_total": 6,
-          "last_iter": "iteration # 6 ecut= 80.00 Ry beta= 0.30",
-          "pct": 4,
+          "scf_total": 7,
+          "last_iter": "iteration # 7 ecut= 80.00 Ry beta= 0.30",
+          "pct": 5,
           "stale": false,
-          "out_mtime": 1795148822
+          "out_mtime": 1795155277
         }
       ]
     },
@@ -80,49 +80,49 @@
       "id": "soegi-lab",
       "name": "SOEGI-LAB",
       "reachable": true,
-      "load": "48.50 48.40 48.09 49/366 1678",
+      "load": "48.25 48.24 48.15 49/368 2296",
       "warn": [],
       "running": [
         {
           "job": "ref_Al",
           "queue": "ref3",
           "pid": "487",
-          "elapsed_s": 5282,
-          "elapsed": "1j 28mnt",
-          "cpu": "544",
+          "elapsed_s": 11958,
+          "elapsed": "3j 19mnt",
+          "cpu": "539",
           "bfgs": null,
-          "scf_total": 1,
-          "last_iter": "iteration # 1 ecut= 80.00 Ry beta= 0.70",
-          "pct": 1,
+          "scf_total": 5,
+          "last_iter": "iteration # 5 ecut= 80.00 Ry beta= 0.70",
+          "pct": 3,
           "stale": false,
-          "out_mtime": 1795145009
+          "out_mtime": 1795154913
         },
         {
           "job": "r2_21_Ca3FNaO12P3Sm",
           "queue": "r2",
           "pid": "494",
-          "elapsed_s": 5282,
-          "elapsed": "1j 28mnt",
-          "cpu": "520",
+          "elapsed_s": 11958,
+          "elapsed": "3j 19mnt",
+          "cpu": "526",
           "bfgs": null,
           "scf_total": 0,
           "last_iter": "",
           "pct": 0,
-          "stale": false,
+          "stale": true,
           "out_mtime": 1795144236
         },
         {
           "job": "r1_10_CaFK2O4P",
           "queue": "r1",
           "pid": "500",
-          "elapsed_s": 5282,
-          "elapsed": "1j 28mnt",
+          "elapsed_s": 11957,
+          "elapsed": "3j 19mnt",
           "cpu": "532",
           "bfgs": 5,
           "scf_total": 146,
           "last_iter": "iteration # 5 ecut= 80.00 Ry beta= 0.70",
           "pct": 36,
-          "stale": false,
+          "stale": true,
           "out_mtime": 1795144236
         }
       ]
@@ -131,22 +131,56 @@
       "id": "serverfisika",
       "name": "serverfisika",
       "reachable": true,
-      "load": "6.77 6.57 6.14 2/137 1228",
+      "load": "5.56 5.71 5.67 9/137 1576",
       "warn": [],
       "running": [
         {
           "job": "r3_host_tcp",
           "queue": "r3",
           "pid": "11",
-          "elapsed_s": 21710,
-          "elapsed": "6j 1mnt",
-          "cpu": "599",
+          "elapsed_s": 28396,
+          "elapsed": "7j 53mnt",
+          "cpu": "595",
           "bfgs": null,
           "scf_total": 0,
           "last_iter": "",
           "pct": 0,
           "stale": false,
           "out_mtime": 0
+        }
+      ]
+    },
+    {
+      "id": "muse",
+      "name": "Muse (VM)",
+      "reachable": true,
+      "load": "0.17",
+      "warn": [],
+      "running": [],
+      "tasks": [
+        {
+          "note": "r2_01 duplikat MP (5x), dipakai validasi saja",
+          "pct": 100,
+          "status": "selesai",
+          "task": "Dataset latih v3 — 3 sampel baru (r2_16, r2_17, r2_19)"
+        },
+        {
+          "note": "4/30 label dihitung, 1 stabil (r2_01)",
+          "pct": 13,
+          "status": "jalan",
+          "task": "Analisis vonis putaran 2"
+        },
+        {
+          "note": "Menunggu celah antrean DFT Mac",
+          "pct": 0,
+          "status": "menunggu",
+          "task": "Fine-tuning GNN 5 seed (dataset v3)"
+        },
+        {
+          "note": "Laporan WA tiap ada job selesai",
+          "pct": null,
+          "status": "jalan",
+          "task": "Monitor DFT + dashboard (kolektor 15 mnt)"
         }
       ]
     }
