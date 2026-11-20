@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>PRGF — Monitoring DFT</title>
+<style>
+  * { box-sizing: border-box; }
+  body { margin: 0; font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; background: #0f172a; color: #e2e8f0; }
+  .wrap { max-width: 760px; margin: 0 auto; padding: 16px 14px 40px; }
+  h1 { font-size: 22px; margin: 4px 0 2px; }
+  .sub { color: #94a3b8; font-size: 13px; margin: 0 0 4px; }
+  .warn { background: #451a03; border: 1px solid #b45309; color: #fde68a; border-radius: 8px; padding: 10px 12px; font-size: 13px; margin: 12px 0; }
+  .err { background: #450a0a; border: 1px solid #b91c1c; color: #fecaca; border-radius: 8px; padding: 10px 12px; font-size: 13px; margin: 12px 0; }
+  .grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; margin: 14px 0; }
+  @media (max-width: 480px) { .grid { grid-template-columns: 1fr; } }
+  .card { background: #1e293b; border: 1px solid #334155; border-radius: 10px; padding: 12px; }
+  .card h2 { font-size: 15px; margin: 0 0 6px; }
+  .card h3 { font-size: 15px; margin: 0 0 6px; }
+  .big { font-size: 26px; font-weight: 700; }
+  .mut { color: #94a3b8; font-size: 12px; }
+  .bar { height: 10px; background: #334155; border-radius: 6px; overflow: hidden; margin: 8px 0 4px; }
+  .bar > div { height: 100%; background: #22c55e; }
+  .bar > div.mid { background: #f59e0b; }
+  .job { font-family: ui-monospace, Menlo, Consolas, monospace; font-size: 12.5px; word-break: break-all; }
+  .pill { display: inline-block; font-size: 11px; font-weight: 700; padding: 2px 8px; border-radius: 20px; margin-left: 6px; vertical-align: middle; }
+  .pill.run { background: #78350f; color: #fde68a; }
+  .pill.done { background: #14532d; color: #bbf7d0; }
+  .pill.off { background: #7f1d1d; color: #fecaca; }
+  .pill.stale { background: #7f1d1d; color: #fecaca; }
+  .runjob { border-top: 1px solid #334155; padding: 10px 0 2px; margin-top: 10px; }
+  .runjob:first-of-type { border-top: none; margin-top: 2px; }
+  .row { display: flex; justify-content: space-between; gap: 8px; font-size: 12.5px; color: #cbd5e1; margin-top: 3px; flex-wrap: wrap; }
+  details { background: #1e293b; border: 1px solid #334155; border-radius: 10px; padding: 10px 12px; margin: 10px 0; }
+  summary { cursor: pointer; font-weight: 600; font-size: 14px; }
+  ul { margin: 8px 0 2px; padding-left: 18px; font-size: 13px; }
+  li { margin: 3px 0; word-break: break-all; }
+  li.done { color: #86efac; }
+  li.run { color: #fcd34d; }
+  li.pend { color: #94a3b8; }
+  li.skip { color: #64748b; text-decoration: line-through; }
+  .foot { color: #64748b; font-size: 12px; margin-top: 18px; line-height: 1.5; }
+  button { background: #0ea5e9; color: #fff; border: none; border-radius: 8px; padding: 8px 14px; font-size: 14px; cursor: pointer; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>PRGF — Monitoring DFT</h1>
+  <p class="sub" id="upd">Memuat data…</p>
+  <p class="sub">Data diperbarui otomatis tiap 15 menit dari 4 mesin (VPS, Mac Mini, SOEGI-LAB, serverfisika). Persen = perkiraan dari langkah BFGS / iterasi SCF, bukan angka resmi QE.</p>
+  <div id="banner"></div>
+  <div class="grid" id="ringkasan"></div>
+  <div id="mesin"></div>
+  <div id="detail"></div>
+  <p><button id="segarkan">Segarkan sekarang</button></p>
+  <p class="foot">Vonis stabilitas (e_above_hull) dihitung terpisah dari label DFT yang sudah selesai — lihat berkas vonis di folder penelitian. Dashboard ini hanya menampilkan progres mesin, bukan pengganti analisis.</p>
+</div>
+<script>
+let TERAKHIR = 0;
+function persen(a, b) { return b ? Math.round(100 * a / b) : 0; }
+function esc(s) { return String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;'); }
+function muat() {
+  fetch('status.json?_=' + Date.now()).then(function(r) {
+    if (!r.ok) throw new Error('status.json tidak ditemukan (' + r.status + ')');
+    return r.json();
+  }).then(tampil).catch(function(e) {
+    document.getElementById('banner').innerHTML =
+      '<div class="err">Tidak bisa memuat data status: ' + esc(e.message) + '</div>';
+  });
+}
+function tampil(s) {
+  TERAKHIR = s.updated_at_unix || 0;
+  document.getElementById('upd').textContent = 'Terakhir diperbarui: ' + (s.updated_at_wib || '—');
+  var umurMenit = TERAKHIR ? Math.round((Date.now() / 1000 - TERAKHIR) / 60) : 999;
+  var b = '';
+  if (umurMenit > 30) {
+    b += '<div class="warn">Data sudah ' + umurMenit + ' menit tidak diperbarui — kolektor mungkin bermasalah. Angka di bawah ini kedaluwarsa.</div>';
+  }
+  document.getElementById('banner').innerHTML = b;
+  // ringkasan antrean
+  var urutan = ['r1', 'r1b', 'ref1', 'ref2', 'ref3', 'r2', 'r3'];
+  var html = '';
+  urutan.forEach(function(k) {
+    var q = s.queues[k];
+    if (!q) return;
+    var p = persen(q.done_count, q.total);
+    html += '<div class="card"><h2>' + esc(q.label) + '</h2>'
+      + '<div><span class="big">' + q.done_count + '</span><span class="mut"> / ' + q.total + ' selesai</span></div>'
+      + '<div class="bar"><div style="width:' + p + '%"></div></div>'
+      + '<div class="mut">' + q.running_count + ' jalan &middot; ' + q.pending_count + ' belum</div>'
+      + '</div>';
+  });
+  document.getElementById('ringkasan').innerHTML = html;
+  // mesin
+  var mh = '';
+  s.machines.forEach(function(m) {
+    mh += '<div class="card"><h3>' + esc(m.name)
+      + (m.reachable ? '<span class="pill done">online</span>' : '<span class="pill off">tidak terjangkau</span>')
+      + '</h3>';
+    if (m.load) mh += '<div class="mut">Beban: ' + esc(String(m.load).split(' ').slice(0, 3).join(' ')) + '</div>';
+    if (!m.reachable) {
+      mh += '<div class="mut">SSH gagal pada pembaruan terakhir — data job tidak tersedia.</div>';
+    } else if (!m.running.length) {
+      mh += '<div class="mut">Tidak ada job pw.x yang jalan.</div>';
+    }
+    m.running.forEach(function(r) {
+      mh += '<div class="runjob"><div><span class="job">' + esc(r.job) + '</span>'
+        + '<span class="pill run">' + r.pct + '%</span>'
+        + (r.stale ? '<span class="pill stale">.out diam &gt;2 jam</span>' : '') + '</div>'
+        + '<div class="bar"><div class="mid" style="width:' + r.pct + '%"></div></div>'
+        + '<div class="row"><span>Jalan: ' + esc(r.elapsed) + '</span>'
+        + '<span>' + (r.bfgs != null ? 'BFGS ' + r.bfgs : 'SCF ' + r.scf_total + ' iterasi') + '</span>'
+        + '<span>CPU ' + esc(String(r.cpu)) + '%</span></div></div>';
+    });
+    if (m.warn && m.warn.length) {
+      mh += '<div class="mut" style="margin-top:8px">' + esc(m.warn.join('; ')) + '</div>';
+    }
+    mh += '</div>';
+  });
+  document.getElementById('mesin').innerHTML = mh;
+  // detail per antrean
+  var dh = '';
+  urutan.forEach(function(k) {
+    var q = s.queues[k];
+    if (!q) return;
+    dh += '<details><summary>' + esc(q.label) + ' — ' + q.done_count + '/' + q.total + ' selesai</summary>';
+    if (q.running.length) {
+      dh += '<p class="mut" style="margin:8px 0 0">Sedang jalan:</p><ul>';
+      q.running.forEach(function(j) { dh += '<li class="run">' + esc(j) + '</li>'; });
+      dh += '</ul>';
+    }
+    if (q.done.length) {
+      dh += '<p class="mut" style="margin:8px 0 0">Selesai:</p><ul>';
+      q.done.forEach(function(j) { dh += '<li class="done">' + esc(j) + '</li>'; });
+      dh += '</ul>';
+    }
+    if (q.pending.length) {
+      dh += '<p class="mut" style="margin:8px 0 0">Belum selesai:</p><ul>';
+      q.pending.forEach(function(j) { dh += '<li class="pend">' + esc(j) + '</li>'; });
+      dh += '</ul>';
+    }
+    if (q.skipped && q.skipped.length) {
+      dh += '<p class="mut" style="margin:8px 0 0">Dilewati (keputusan pemilik):</p><ul>';
+      q.skipped.forEach(function(j) { dh += '<li class="skip">' + esc(j) + '</li>'; });
+      dh += '</ul>';
+    }
+    dh += '</details>';
+  });
+  document.getElementById('detail').innerHTML = dh;
+}
+document.getElementById('segarkan').addEventListener('click', muat);
+muat();
+setInterval(muat, 60000);
+</script>
+</body>
+</html>
