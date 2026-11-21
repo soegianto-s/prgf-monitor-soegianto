@@ -1,20 +1,20 @@
 {
-  "updated_at_wib": "2026-11-21 17:27 WIB",
-  "updated_at_unix": 1795256875,
+  "updated_at_wib": "2026-11-21 17:42 WIB",
+  "updated_at_unix": 1795257776,
   "machines": [
     {
       "id": "vps",
       "name": "VPS",
       "reachable": true,
-      "load": "9.87 9.95 9.98 12/1231 145790",
+      "load": "10.20 10.07 10.02 11/1232 150909",
       "warn": [],
       "running": [
         {
           "job": "r2_27_Ca4F3Mg4O17P4",
           "queue": "r2",
           "pid": "3080851",
-          "elapsed_s": 222368,
-          "elapsed": "2 hari 13j 46mnt",
+          "elapsed_s": 223269,
+          "elapsed": "2 hari 14j 1mnt",
           "cpu": "582",
           "bfgs": 12,
           "scf_total": 210,
@@ -27,15 +27,15 @@
           "job": "r1b_04_CCa20H2O53P12",
           "queue": "r1b",
           "pid": "3517997",
-          "elapsed_s": 142260,
-          "elapsed": "1 hari 15j 31mnt",
+          "elapsed_s": 143160,
+          "elapsed": "1 hari 15j 46mnt",
           "cpu": "183",
           "bfgs": 14,
-          "scf_total": 411,
-          "last_iter": "iteration # 20 ecut= 80.00 Ry beta= 0.70",
+          "scf_total": 415,
+          "last_iter": "iteration # 24 ecut= 80.00 Ry beta= 0.70",
           "pct": 95,
           "stale": false,
-          "out_mtime": 1795256866
+          "out_mtime": 1795257691
         }
       ]
     },
@@ -53,15 +53,15 @@
       "id": "soegi-lab",
       "name": "SOEGI-LAB",
       "reachable": true,
-      "load": "48.16 48.03 48.01 49/373 24622",
+      "load": "48.01 48.00 48.00 49/377 24876",
       "warn": [],
       "running": [
         {
           "job": "r2_21_Ca3FNaO12P3Sm",
           "queue": "r2",
           "pid": "501",
-          "elapsed_s": 83381,
-          "elapsed": "23j 9mnt",
+          "elapsed_s": 84283,
+          "elapsed": "23j 24mnt",
           "cpu": "531",
           "bfgs": null,
           "scf_total": 0,
@@ -74,8 +74,8 @@
           "job": "r1_10_CaFK2O4P",
           "queue": "r1",
           "pid": "509",
-          "elapsed_s": 83381,
-          "elapsed": "23j 9mnt",
+          "elapsed_s": 84283,
+          "elapsed": "23j 24mnt",
           "cpu": "532",
           "bfgs": 5,
           "scf_total": 146,
@@ -88,8 +88,8 @@
           "job": "ref_B",
           "queue": "ref3",
           "pid": "17414",
-          "elapsed_s": 25506,
-          "elapsed": "7j 5mnt",
+          "elapsed_s": 26409,
+          "elapsed": "7j 20mnt",
           "cpu": "533",
           "bfgs": null,
           "scf_total": 0,
@@ -104,16 +104,16 @@
       "id": "serverfisika",
       "name": "serverfisika",
       "reachable": true,
-      "load": "5.73 6.00 6.22 9/138 25325",
+      "load": "6.76 6.77 6.44 9/138 25529",
       "warn": [],
       "running": [
         {
           "job": "r3_host_tcp",
           "queue": "r3",
           "pid": "11",
-          "elapsed_s": 128919,
-          "elapsed": "1 hari 11j 48mnt",
-          "cpu": "598",
+          "elapsed_s": 129825,
+          "elapsed": "1 hari 12j 3mnt",
+          "cpu": "597",
           "bfgs": null,
           "scf_total": 0,
           "last_iter": "",
@@ -127,7 +127,7 @@
       "id": "muse",
       "name": "Muse (VM)",
       "reachable": true,
-      "load": "0.09",
+      "load": "0.44",
       "warn": [],
       "running": [],
       "tasks": [
@@ -138,8 +138,8 @@
           "task": "Dataset latih v3 — 3 sampel baru (r2_16, r2_17, r2_19)"
         },
         {
-          "note": "4/30 label dihitung, 1 stabil (r2_01)",
-          "pct": 13,
+          "note": "5/30 label dihitung, 1 stabil (r2_01 beta-TCP); r2_24 TIDAK STABIL +0,3110 (vonis 21 Nov 2026); r2_18 menunggu mu_Mg",
+          "pct": 17,
           "status": "jalan",
           "task": "Analisis vonis putaran 2"
         },
