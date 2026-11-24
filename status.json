@@ -1,73 +1,60 @@
 {
-  "updated_at_wib": "2026-11-25 00:57 WIB",
-  "updated_at_unix": 1795543078,
+  "updated_at_wib": "2026-11-25 01:12 WIB",
+  "updated_at_unix": 1795543975,
   "machines": [
     {
       "id": "vps",
       "name": "VPS",
       "reachable": true,
-      "load": "8.25 7.99 7.80 9/1227 1826930",
+      "load": "7.74 7.53 7.64 11/1229 1832380",
       "warn": [],
       "running": [
         {
           "job": "r2_27_Ca4F3Mg4O17P4",
           "queue": "r2",
           "pid": "3080851",
-          "elapsed_s": 508572,
-          "elapsed": "5 hari 21j 16mnt",
+          "elapsed_s": 509468,
+          "elapsed": "5 hari 21j 31mnt",
           "cpu": "583",
           "bfgs": 24,
-          "scf_total": 346,
-          "last_iter": "iteration # 5 ecut= 80.00 Ry beta= 0.70",
+          "scf_total": 351,
+          "last_iter": "iteration # 10 ecut= 80.00 Ry beta= 0.70",
           "pct": 95,
           "stale": false,
-          "out_mtime": 1795543063
+          "out_mtime": 1795543908
         }
       ]
     },
     {
       "id": "mac",
       "name": "Mac Mini M1",
-      "reachable": true,
-      "load": "3.38 7.44 11.72",
-      "warn": [],
-      "running": [
-        {
-          "job": "r1b_06_Ca3EuFNaO12P3_sp",
-          "queue": "r1b",
-          "pid": "14566",
-          "elapsed_s": 425536,
-          "elapsed": "4 hari 22j 12mnt",
-          "cpu": "80.7",
-          "bfgs": 0,
-          "scf_total": 73,
-          "last_iter": "iteration # 9 ecut= 80.00 Ry beta= 0.30",
-          "pct": 49,
-          "stale": false,
-          "out_mtime": 1795539864
-        }
-      ]
+      "reachable": false,
+      "load": null,
+      "warn": [
+        "ssh gagal: Connection closed by UNKNOWN port 65535"
+      ],
+      "running": []
     },
     {
       "id": "soegi-lab",
       "name": "SOEGI-LAB",
       "reachable": true,
-      "load": "17.52 16.32 15.42 17/303 23288",
+      "load": "13.16 14.37 14.40 17/308 23493",
       "warn": [],
       "running": [
         {
           "job": "r1_10_CaFK2O4P",
           "queue": "r1",
           "pid": "540",
-          "elapsed_s": 79774,
-          "elapsed": "22j 9mnt",
-          "cpu": "787",
-          "bfgs": 14,
-          "scf_total": 286,
-          "last_iter": "iteration # 8 ecut= 80.00 Ry beta= 0.70",
+          "elapsed_s": 80688,
+          "elapsed": "22j 24mnt",
+          "cpu": "792",
+          "bfgs": 15,
+          "scf_total": 292,
+          "last_iter": "iteration # 3 ecut= 80.00 Ry beta= 0.70",
           "pct": 95,
           "stale": false,
-          "out_mtime": 1795542835
+          "out_mtime": 1795543806
         }
       ]
     },
@@ -75,15 +62,15 @@
       "id": "serverfisika",
       "name": "serverfisika",
       "reachable": true,
-      "load": "5.64 5.00 5.43 10/138 30778",
+      "load": "1.68 4.42 5.39 2/138 30982",
       "warn": [],
       "running": [
         {
           "job": "r3_host_tcp",
           "queue": "r3",
           "pid": "11",
-          "elapsed_s": 415108,
-          "elapsed": "4 hari 19j 18mnt",
+          "elapsed_s": 416053,
+          "elapsed": "4 hari 19j 34mnt",
           "cpu": "588",
           "bfgs": null,
           "scf_total": 0,
@@ -98,7 +85,7 @@
       "id": "muse",
       "name": "Muse (VM)",
       "reachable": true,
-      "load": "0.06",
+      "load": "0.08",
       "warn": [],
       "running": [],
       "tasks": [
@@ -160,14 +147,12 @@
       "label": "Putaran 1b (r1b)",
       "total": 6,
       "done_count": 1,
-      "running_count": 1,
+      "running_count": 0,
       "pending_count": 4,
       "done": [
         "r1b_04_CCa20H2O53P12"
       ],
-      "running": [
-        "r1b_06_Ca3EuFNaO12P3_sp"
-      ],
+      "running": [],
       "pending": [
         "r1b_03_Ca15IO37P9",
         "r1b_08_Ca5O16P4Sr",
@@ -203,21 +188,22 @@
     "ref2": {
       "label": "Referensi batch 2",
       "total": 8,
-      "done_count": 8,
+      "done_count": 6,
       "running_count": 0,
-      "pending_count": 0,
+      "pending_count": 2,
       "done": [
         "ref2_Bi",
-        "ref2_Ce",
         "ref2_Eu",
         "ref2_I",
         "ref2_Na",
         "ref2_Si",
-        "ref2_Sr",
-        "ref2_Tb"
+        "ref2_Sr"
       ],
       "running": [],
-      "pending": [],
+      "pending": [
+        "ref2_Ce",
+        "ref2_Tb"
+      ],
       "skipped": []
     },
     "ref3": {
