@@ -1,27 +1,27 @@
 {
-  "updated_at_wib": "2026-11-25 15:12 WIB",
-  "updated_at_unix": 1795594376,
+  "updated_at_wib": "2026-11-25 15:27 WIB",
+  "updated_at_unix": 1795595275,
   "machines": [
     {
       "id": "vps",
       "name": "VPS",
       "reachable": true,
-      "load": "8.77 7.84 7.47 9/1231 2136318",
+      "load": "8.19 7.77 7.62 9/1236 2142328",
       "warn": [],
       "running": [
         {
           "job": "r2_05_Ca5O12P3",
           "queue": "r2",
           "pid": "2039116",
-          "elapsed_s": 16030,
-          "elapsed": "4j 27mnt",
-          "cpu": "657",
+          "elapsed_s": 16928,
+          "elapsed": "4j 42mnt",
+          "cpu": "658",
           "bfgs": 3,
-          "scf_total": 68,
-          "last_iter": "iteration # 1 ecut= 80.00 Ry beta= 0.70",
+          "scf_total": 71,
+          "last_iter": "iteration # 4 ecut= 80.00 Ry beta= 0.70",
           "pct": 21,
           "stale": false,
-          "out_mtime": 1795593973
+          "out_mtime": 1795595189
         }
       ]
     },
@@ -38,43 +38,69 @@
     {
       "id": "soegi-lab",
       "name": "SOEGI-LAB",
-      "reachable": false,
-      "load": null,
-      "warn": [
-        "scp collect.sh gagal: Connection closed by UNKNOWN port 65535\nscp: Connection closed"
-      ],
-      "running": []
+      "reachable": true,
+      "load": "15.66 15.82 15.91 17/304 39430",
+      "warn": [],
+      "running": [
+        {
+          "job": "r1_07_CaO3P",
+          "queue": "r1",
+          "pid": "31324",
+          "elapsed_s": 23558,
+          "elapsed": "6j 32mnt",
+          "cpu": "1416",
+          "bfgs": 6,
+          "scf_total": 131,
+          "last_iter": "iteration # 10 ecut= 80.00 Ry beta= 0.70",
+          "pct": 43,
+          "stale": false,
+          "out_mtime": 1795595025
+        }
+      ]
     },
     {
       "id": "serverfisika",
       "name": "serverfisika",
-      "reachable": false,
-      "load": null,
-      "warn": [
-        "scp collect.sh gagal: Connection closed by UNKNOWN port 65535\nscp: Connection closed"
-      ],
-      "running": []
+      "reachable": true,
+      "load": "6.65 6.70 6.04 9/137 11241",
+      "warn": [],
+      "running": [
+        {
+          "job": "r3_09",
+          "queue": "r3",
+          "pid": "3243",
+          "elapsed_s": 32150,
+          "elapsed": "8j 55mnt",
+          "cpu": "602",
+          "bfgs": null,
+          "scf_total": 0,
+          "last_iter": "",
+          "pct": 0,
+          "stale": false,
+          "out_mtime": 0
+        }
+      ]
     },
     {
       "id": "gamma",
       "name": "Gamma",
       "reachable": true,
-      "load": "6.06 6.16 5.35 3/287 4876",
+      "load": "6.04 6.11 5.85 5/348 9911",
       "warn": [],
       "running": [
         {
           "job": "r2_23_Ca4FO12P3Sr",
           "queue": "r2",
           "pid": "928",
-          "elapsed_s": 2254,
-          "elapsed": "37mnt",
-          "cpu": "177",
+          "elapsed_s": 3159,
+          "elapsed": "52mnt",
+          "cpu": "172",
           "bfgs": null,
-          "scf_total": 4,
-          "last_iter": "iteration # 4 ecut= 80.00 Ry beta= 0.70",
-          "pct": 3,
+          "scf_total": 6,
+          "last_iter": "iteration # 6 ecut= 80.00 Ry beta= 0.70",
+          "pct": 4,
           "stale": false,
-          "out_mtime": 1795593601
+          "out_mtime": 1795594962
         }
       ]
     },
@@ -82,7 +108,7 @@
       "id": "muse",
       "name": "Muse (VM)",
       "reachable": true,
-      "load": "0.91",
+      "load": "0.26",
       "warn": [],
       "running": [],
       "tasks": [
@@ -123,12 +149,22 @@
     "r1": {
       "label": "Putaran 1 (r1)",
       "total": 7,
-      "done_count": 0,
-      "running_count": 0,
-      "pending_count": 0,
-      "done": [],
-      "running": [],
-      "pending": [],
+      "done_count": 1,
+      "running_count": 1,
+      "pending_count": 5,
+      "done": [
+        "r1_10_CaFK2O4P"
+      ],
+      "running": [
+        "r1_07_CaO3P"
+      ],
+      "pending": [
+        "r1_01_BaCa6O17P4",
+        "r1_02_Ca11O28P7",
+        "r1_05_CCa3H4O14P2Zn2",
+        "r1_11_C2CaLiO6P",
+        "r1_13_C2CaO9P"
+      ],
       "skipped": []
     },
     "r1b": {
@@ -199,19 +235,41 @@
       "total": 14,
       "done_count": 0,
       "running_count": 0,
-      "pending_count": 0,
+      "pending_count": 14,
       "done": [],
       "running": [],
-      "pending": [],
+      "pending": [
+        "ref_Al",
+        "ref_B",
+        "ref_Cl",
+        "ref_Cs",
+        "ref_Dy",
+        "ref_Hf",
+        "ref_In",
+        "ref_La",
+        "ref_Mg",
+        "ref_Mn",
+        "ref_Nd",
+        "ref_S",
+        "ref_Se",
+        "ref_Sm"
+      ],
       "skipped": []
     },
     "r2": {
       "label": "Putaran 2 (r2)",
       "total": 30,
-      "done_count": 1,
+      "done_count": 8,
       "running_count": 2,
-      "pending_count": 27,
+      "pending_count": 20,
       "done": [
+        "r2_01_Ca3O8P2",
+        "r2_16_Ca2O6PTb",
+        "r2_17_Ca2CeO8P",
+        "r2_18_CaFMgO4P",
+        "r2_19_Ca2H2O6P",
+        "r2_24_Al2CaO6P",
+        "r2_26_BCaO5P",
         "r2_27_Ca4F3Mg4O17P4"
       ],
       "running": [
@@ -219,7 +277,6 @@
         "r2_23_Ca4FO12P3Sr"
       ],
       "pending": [
-        "r2_01_Ca3O8P2",
         "r2_02_Ca5FO12P3",
         "r2_03_Ca14F3MnO36P9",
         "r2_04_Ca18Eu2O48P12S3",
@@ -233,16 +290,10 @@
         "r2_13_CCa10O27P6",
         "r2_14_CCa5O12P3",
         "r2_15_Ca3HfNa4O24P2S4",
-        "r2_16_Ca2O6PTb",
-        "r2_17_Ca2CeO8P",
-        "r2_18_CaFMgO4P",
-        "r2_19_Ca2H2O6P",
         "r2_20_Ca2O5P",
         "r2_21_Ca3FNaO12P3Sm",
         "r2_22_Ca9F2NdO24P5Si",
-        "r2_24_Al2CaO6P",
         "r2_25_Ca5F4Mg5O21P5",
-        "r2_26_BCaO5P",
         "r2_28_Ca18F3Nd2O48P9Si3",
         "r2_29_Ca9InO28P7",
         "r2_30_Ca10CsO28P7"
@@ -253,11 +304,36 @@
       "label": "Putaran 3 (r3)",
       "total": 23,
       "done_count": 0,
-      "running_count": 0,
-      "pending_count": 0,
+      "running_count": 1,
+      "pending_count": 22,
       "done": [],
-      "running": [],
-      "pending": [],
+      "running": [
+        "r3_09"
+      ],
+      "pending": [
+        "r3_01",
+        "r3_02",
+        "r3_03",
+        "r3_04",
+        "r3_05",
+        "r3_06",
+        "r3_07",
+        "r3_08",
+        "r3_10",
+        "r3_11",
+        "r3_12",
+        "r3_13",
+        "r3_14",
+        "r3_15",
+        "r3_16",
+        "r3_17",
+        "r3_18",
+        "r3_19",
+        "r3_20",
+        "r3_21",
+        "r3_host_ha",
+        "r3_host_tcp"
+      ],
       "skipped": []
     }
   }
