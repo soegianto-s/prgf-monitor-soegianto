@@ -1,27 +1,27 @@
 {
-  "updated_at_wib": "2026-11-25 13:12 WIB",
-  "updated_at_unix": 1795587175,
+  "updated_at_wib": "2026-11-25 13:25 WIB",
+  "updated_at_unix": 1795587903,
   "machines": [
     {
       "id": "vps",
       "name": "VPS",
       "reachable": true,
-      "load": "7.79 7.47 7.45 10/1230 2092301",
+      "load": "7.60 7.44 7.44 16/1228 2096828",
       "warn": [],
       "running": [
         {
           "job": "r2_05_Ca5O12P3",
           "queue": "r2",
           "pid": "2039116",
-          "elapsed_s": 8828,
-          "elapsed": "2j 27mnt",
+          "elapsed_s": 9556,
+          "elapsed": "2j 39mnt",
           "cpu": "657",
           "bfgs": 0,
-          "scf_total": 43,
-          "last_iter": "iteration # 9 ecut= 80.00 Ry beta= 0.70",
-          "pct": 29,
+          "scf_total": 47,
+          "last_iter": "iteration # 13 ecut= 80.00 Ry beta= 0.70",
+          "pct": 31,
           "stale": false,
-          "out_mtime": 1795587097
+          "out_mtime": 1795587839
         }
       ]
     },
@@ -29,22 +29,22 @@
       "id": "mac",
       "name": "Mac Mini M1",
       "reachable": true,
-      "load": "5.37 6.64 6.90",
+      "load": "5.28 5.32 5.91",
       "warn": [],
       "running": [
         {
           "job": "r1b_06_Ca3EuFNaO12P3_sp",
           "queue": "r1b",
           "pid": "14566",
-          "elapsed_s": 469633,
-          "elapsed": "5 hari 10j 27mnt",
-          "cpu": "179.8",
-          "bfgs": 0,
-          "scf_total": 92,
-          "last_iter": "iteration # 28 ecut= 80.00 Ry beta= 0.30",
-          "pct": 61,
+          "elapsed_s": 470361,
+          "elapsed": "5 hari 10j 39mnt",
+          "cpu": "186.1",
+          "bfgs": 1,
+          "scf_total": 93,
+          "last_iter": "iteration # 1 ecut= 80.00 Ry beta= 0.30",
+          "pct": 7,
           "stale": false,
-          "out_mtime": 1795586085
+          "out_mtime": 1795587765
         }
       ]
     },
@@ -52,22 +52,22 @@
       "id": "soegi-lab",
       "name": "SOEGI-LAB",
       "reachable": true,
-      "load": "14.86 15.00 15.38 17/307 36398",
+      "load": "16.73 14.77 14.83 17/304 36701",
       "warn": [],
       "running": [
         {
           "job": "r1_07_CaO3P",
           "queue": "r1",
           "pid": "31324",
-          "elapsed_s": 15441,
-          "elapsed": "4j 17mnt",
-          "cpu": "1411",
-          "bfgs": 3,
-          "scf_total": 94,
-          "last_iter": "iteration # 12 ecut= 80.00 Ry beta= 0.70",
-          "pct": 21,
+          "elapsed_s": 16169,
+          "elapsed": "4j 29mnt",
+          "cpu": "1410",
+          "bfgs": 4,
+          "scf_total": 96,
+          "last_iter": "iteration # 1 ecut= 80.00 Ry beta= 0.70",
+          "pct": 29,
           "stale": false,
-          "out_mtime": 1795586960
+          "out_mtime": 1795587483
         }
       ]
     },
@@ -75,16 +75,16 @@
       "id": "serverfisika",
       "name": "serverfisika",
       "reachable": true,
-      "load": "6.64 5.88 6.10 9/138 9137",
+      "load": "4.20 5.57 6.02 9/138 9379",
       "warn": [],
       "running": [
         {
           "job": "r3_09",
           "queue": "r3",
           "pid": "3243",
-          "elapsed_s": 24039,
-          "elapsed": "6j 40mnt",
-          "cpu": "617",
+          "elapsed_s": 24774,
+          "elapsed": "6j 52mnt",
+          "cpu": "615",
           "bfgs": null,
           "scf_total": 0,
           "last_iter": "",
@@ -93,6 +93,14 @@
           "out_mtime": 0
         }
       ]
+    },
+    {
+      "id": "gamma",
+      "name": "Gamma",
+      "reachable": true,
+      "load": "0.08 0.57 0.47 1/293 46349",
+      "warn": [],
+      "running": []
     },
     {
       "id": "muse",
