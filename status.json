@@ -1,27 +1,27 @@
 {
-  "updated_at_wib": "2026-11-26 05:58 WIB",
-  "updated_at_unix": 1795647480,
+  "updated_at_wib": "2026-11-26 06:13 WIB",
+  "updated_at_unix": 1795648380,
   "machines": [
     {
       "id": "vps",
       "name": "VPS",
       "reachable": true,
-      "load": "7.23 7.56 7.51 9/1232 2455967",
+      "load": "5.06 6.57 7.12 10/1232 2461497",
       "warn": [],
       "running": [
         {
           "job": "r2_05_Ca5O12P3",
           "queue": "r2",
           "pid": "2039116",
-          "elapsed_s": 69133,
-          "elapsed": "19j 12mnt",
+          "elapsed_s": 70033,
+          "elapsed": "19j 27mnt",
           "cpu": "659",
           "bfgs": 18,
-          "scf_total": 274,
-          "last_iter": "iteration # 6 ecut= 80.00 Ry beta= 0.70",
+          "scf_total": 278,
+          "last_iter": "iteration # 10 ecut= 80.00 Ry beta= 0.70",
           "pct": 95,
           "stale": false,
-          "out_mtime": 1795647408
+          "out_mtime": 1795648363
         }
       ]
     },
@@ -29,16 +29,16 @@
       "id": "mac",
       "name": "Mac Mini M1",
       "reachable": true,
-      "load": "3.75 4.84 4.97",
+      "load": "4.85 6.33 6.90",
       "warn": [],
       "running": [
         {
           "job": "r1b_06_Ca3EuFNaO12P3_sp",
           "queue": "r1b",
           "pid": "14566",
-          "elapsed_s": 529940,
-          "elapsed": "6 hari 3j 12mnt",
-          "cpu": "109.7",
+          "elapsed_s": 530840,
+          "elapsed": "6 hari 3j 27mnt",
+          "cpu": "96.1",
           "bfgs": 1,
           "scf_total": 106,
           "last_iter": "iteration # 14 ecut= 80.00 Ry beta= 0.30",
@@ -52,22 +52,22 @@
       "id": "soegi-lab",
       "name": "SOEGI-LAB",
       "reachable": true,
-      "load": "16.19 15.70 15.93 17/303 54565",
+      "load": "17.49 15.79 15.82 32/311 54799",
       "warn": [],
       "running": [
         {
           "job": "r1_07_CaO3P",
           "queue": "r1",
           "pid": "31324",
-          "elapsed_s": 75750,
-          "elapsed": "21j 2mnt",
+          "elapsed_s": 76647,
+          "elapsed": "21j 17mnt",
           "cpu": "1426",
-          "bfgs": 23,
-          "scf_total": 378,
-          "last_iter": "iteration # 12 ecut= 80.00 Ry beta= 0.70",
+          "bfgs": 24,
+          "scf_total": 382,
+          "last_iter": "iteration # 1 ecut= 80.00 Ry beta= 0.70",
           "pct": 95,
           "stale": false,
-          "out_mtime": 1795647198
+          "out_mtime": 1795648047
         }
       ]
     },
@@ -75,15 +75,15 @@
       "id": "serverfisika",
       "name": "serverfisika",
       "reachable": true,
-      "load": "6.60 6.20 6.09 2/138 24353",
+      "load": "3.20 5.75 6.14 3/138 24557",
       "warn": [],
       "running": [
         {
           "job": "r3_09",
           "queue": "r3",
           "pid": "3243",
-          "elapsed_s": 84353,
-          "elapsed": "23j 25mnt",
+          "elapsed_s": 85260,
+          "elapsed": "23j 41mnt",
           "cpu": "592",
           "bfgs": null,
           "scf_total": 0,
@@ -98,22 +98,22 @@
       "id": "gamma",
       "name": "Gamma",
       "reachable": true,
-      "load": "5.07 5.43 5.53 5/338 143777",
+      "load": "5.77 5.81 5.69 5/342 145740",
       "warn": [],
       "running": [
         {
           "job": "r2_23_Ca4FO12P3Sr",
           "queue": "r2",
           "pid": "928",
-          "elapsed_s": 55365,
-          "elapsed": "15j 22mnt",
-          "cpu": "163",
+          "elapsed_s": 56272,
+          "elapsed": "15j 37mnt",
+          "cpu": "164",
           "bfgs": 4,
-          "scf_total": 83,
-          "last_iter": "iteration # 2 ecut= 80.00 Ry beta= 0.70",
+          "scf_total": 84,
+          "last_iter": "iteration # 3 ecut= 80.00 Ry beta= 0.70",
           "pct": 29,
           "stale": false,
-          "out_mtime": 1795647468
+          "out_mtime": 1795647845
         }
       ]
     },
@@ -121,7 +121,7 @@
       "id": "muse",
       "name": "Muse (VM)",
       "reachable": true,
-      "load": "0.85",
+      "load": "1.13",
       "warn": [],
       "running": [],
       "tasks": [
