@@ -1,27 +1,27 @@
 {
-  "updated_at_wib": "2026-11-27 01:27 WIB",
-  "updated_at_unix": 1795717678,
+  "updated_at_wib": "2026-11-27 01:43 WIB",
+  "updated_at_unix": 1795718580,
   "machines": [
     {
       "id": "vps",
       "name": "VPS",
       "reachable": true,
-      "load": "7.97 7.67 7.56 9/1231 2878474",
+      "load": "7.76 7.63 7.57 9/1233 2883737",
       "warn": [],
       "running": [
         {
           "job": "r2_07_Ca10O24P6S",
           "queue": "r2",
           "pid": "2750133",
-          "elapsed_s": 21206,
-          "elapsed": "5j 53mnt",
+          "elapsed_s": 22106,
+          "elapsed": "6j 8mnt",
           "cpu": "679",
           "bfgs": 2,
-          "scf_total": 70,
-          "last_iter": "iteration # 2 ecut= 80.00 Ry beta= 0.70",
+          "scf_total": 73,
+          "last_iter": "iteration # 5 ecut= 80.00 Ry beta= 0.70",
           "pct": 14,
           "stale": false,
-          "out_mtime": 1795717551
+          "out_mtime": 1795718434
         }
       ]
     },
@@ -29,16 +29,16 @@
       "id": "mac",
       "name": "Mac Mini M1",
       "reachable": true,
-      "load": "7.01 6.19 6.91",
+      "load": "11.67 9.47 7.48",
       "warn": [],
       "running": [
         {
           "job": "r1b_06_Ca3EuFNaO12P3_sp",
           "queue": "r1b",
           "pid": "14566",
-          "elapsed_s": 600138,
-          "elapsed": "6 hari 22j 42mnt",
-          "cpu": "209.3",
+          "elapsed_s": 601039,
+          "elapsed": "6 hari 22j 57mnt",
+          "cpu": "208.6",
           "bfgs": 2,
           "scf_total": 122,
           "last_iter": "iteration # 10 ecut= 80.00 Ry beta= 0.30",
@@ -52,22 +52,22 @@
       "id": "soegi-lab",
       "name": "SOEGI-LAB",
       "reachable": true,
-      "load": "16.68 15.88 15.89 17/303 75258",
+      "load": "13.77 14.39 14.61 17/305 75504",
       "warn": [],
       "running": [
         {
-          "job": "r1_07_CaO3P",
+          "job": "r1_11_C2CaLiO6P",
           "queue": "r1",
-          "pid": "31324",
-          "elapsed_s": 145943,
-          "elapsed": "1 hari 16j 32mnt",
-          "cpu": "1429",
-          "bfgs": 48,
-          "scf_total": 719,
-          "last_iter": "iteration # 11 ecut= 80.00 Ry beta= 0.70",
-          "pct": 95,
+          "pid": "75283",
+          "elapsed_s": 509,
+          "elapsed": "8mnt",
+          "cpu": "1386",
+          "bfgs": null,
+          "scf_total": 3,
+          "last_iter": "iteration # 3 ecut= 80.00 Ry beta= 0.70",
+          "pct": 2,
           "stale": false,
-          "out_mtime": 1795717407
+          "out_mtime": 1795718390
         }
       ]
     },
@@ -75,16 +75,16 @@
       "id": "serverfisika",
       "name": "serverfisika",
       "reachable": true,
-      "load": "3.00 4.96 5.76 9/138 8987",
+      "load": "3.08 4.51 5.43 12/138 9191",
       "warn": [],
       "running": [
         {
           "job": "r3_09",
           "queue": "r3",
           "pid": "3243",
-          "elapsed_s": 154556,
-          "elapsed": "1 hari 18j 55mnt",
-          "cpu": "589",
+          "elapsed_s": 155471,
+          "elapsed": "1 hari 19j 11mnt",
+          "cpu": "588",
           "bfgs": null,
           "scf_total": 0,
           "last_iter": "",
@@ -98,22 +98,22 @@
       "id": "gamma",
       "name": "Gamma",
       "reachable": true,
-      "load": "6.25 5.81 5.67 6/341 302357",
+      "load": "5.73 5.70 5.65 7/343 304361",
       "warn": [],
       "running": [
         {
           "job": "r2_23_Ca4FO12P3Sr",
           "queue": "r2",
           "pid": "207892",
-          "elapsed_s": 41752,
-          "elapsed": "11j 35mnt",
+          "elapsed_s": 42668,
+          "elapsed": "11j 51mnt",
           "cpu": "175",
           "bfgs": 11,
-          "scf_total": 190,
-          "last_iter": "iteration # 6 ecut= 80.00 Ry beta= 0.70",
+          "scf_total": 191,
+          "last_iter": "iteration # 7 ecut= 80.00 Ry beta= 0.70",
           "pct": 79,
           "stale": false,
-          "out_mtime": 1795717456
+          "out_mtime": 1795717869
         }
       ]
     },
@@ -121,7 +121,7 @@
       "id": "muse",
       "name": "Muse (VM)",
       "reachable": true,
-      "load": "0.87",
+      "load": "0.90",
       "warn": [],
       "running": [],
       "tasks": [
@@ -162,20 +162,20 @@
     "r1": {
       "label": "Putaran 1 (r1)",
       "total": 7,
-      "done_count": 1,
+      "done_count": 2,
       "running_count": 1,
-      "pending_count": 5,
+      "pending_count": 4,
       "done": [
+        "r1_07_CaO3P",
         "r1_10_CaFK2O4P"
       ],
       "running": [
-        "r1_07_CaO3P"
+        "r1_11_C2CaLiO6P"
       ],
       "pending": [
         "r1_01_BaCa6O17P4",
         "r1_02_Ca11O28P7",
         "r1_05_CCa3H4O14P2Zn2",
-        "r1_11_C2CaLiO6P",
         "r1_13_C2CaO9P"
       ],
       "skipped": []
