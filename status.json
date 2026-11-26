@@ -1,27 +1,27 @@
 {
-  "updated_at_wib": "2026-11-26 13:12 WIB",
-  "updated_at_unix": 1795673577,
+  "updated_at_wib": "2026-11-26 13:28 WIB",
+  "updated_at_unix": 1795674485,
   "machines": [
     {
       "id": "vps",
       "name": "VPS",
       "reachable": true,
-      "load": "8.45 7.74 7.33 9/1235 2612195",
+      "load": "6.50 7.14 7.27 3/1230 2617632",
       "warn": [],
       "running": [
         {
           "job": "r2_05_Ca5O12P3",
           "queue": "r2",
           "pid": "2039116",
-          "elapsed_s": 95230,
-          "elapsed": "1 hari 2j 27mnt",
+          "elapsed_s": 96138,
+          "elapsed": "1 hari 2j 42mnt",
           "cpu": "655",
           "bfgs": 26,
-          "scf_total": 397,
-          "last_iter": "iteration # 4 ecut= 80.00 Ry beta= 0.70",
+          "scf_total": 401,
+          "last_iter": "iteration # 8 ecut= 80.00 Ry beta= 0.70",
           "pct": 95,
           "stale": false,
-          "out_mtime": 1795673480
+          "out_mtime": 1795674376
         }
       ]
     },
@@ -29,16 +29,16 @@
       "id": "mac",
       "name": "Mac Mini M1",
       "reachable": true,
-      "load": "5.27 6.09 5.52",
+      "load": "4.49 4.92 5.12",
       "warn": [],
       "running": [
         {
           "job": "r1b_06_Ca3EuFNaO12P3_sp",
           "queue": "r1b",
           "pid": "14566",
-          "elapsed_s": 556034,
-          "elapsed": "6 hari 10j 27mnt",
-          "cpu": "197.2",
+          "elapsed_s": 556943,
+          "elapsed": "6 hari 10j 42mnt",
+          "cpu": "228.4",
           "bfgs": 2,
           "scf_total": 113,
           "last_iter": "iteration # 1 ecut= 80.00 Ry beta= 0.30",
@@ -52,22 +52,22 @@
       "id": "soegi-lab",
       "name": "SOEGI-LAB",
       "reachable": true,
-      "load": "14.51 14.57 15.21 17/301 61956",
+      "load": "8.88 11.64 13.53 17/313 62266",
       "warn": [],
       "running": [
         {
           "job": "r1_07_CaO3P",
           "queue": "r1",
           "pid": "31324",
-          "elapsed_s": 101839,
-          "elapsed": "1 hari 4j 17mnt",
-          "cpu": "1426",
-          "bfgs": 33,
-          "scf_total": 507,
-          "last_iter": "iteration # 12 ecut= 80.00 Ry beta= 0.70",
+          "elapsed_s": 102748,
+          "elapsed": "1 hari 4j 32mnt",
+          "cpu": "1424",
+          "bfgs": 34,
+          "scf_total": 515,
+          "last_iter": "iteration # 1 ecut= 80.00 Ry beta= 0.70",
           "pct": 95,
           "stale": false,
-          "out_mtime": 1795673352
+          "out_mtime": 1795674299
         }
       ]
     },
@@ -75,16 +75,16 @@
       "id": "serverfisika",
       "name": "serverfisika",
       "reachable": true,
-      "load": "3.25 5.48 5.87 2/138 30592",
+      "load": "4.58 3.47 4.47 8/138 30834",
       "warn": [],
       "running": [
         {
           "job": "r3_09",
           "queue": "r3",
           "pid": "3243",
-          "elapsed_s": 110457,
-          "elapsed": "1 hari 6j 40mnt",
-          "cpu": "588",
+          "elapsed_s": 111361,
+          "elapsed": "1 hari 6j 56mnt",
+          "cpu": "586",
           "bfgs": null,
           "scf_total": 0,
           "last_iter": "",
@@ -98,22 +98,22 @@
       "id": "gamma",
       "name": "Gamma",
       "reachable": true,
-      "load": "5.32 5.22 5.37 5/342 202400",
+      "load": "6.09 5.69 5.57 5/341 204508",
       "warn": [],
       "running": [
         {
           "job": "r2_23_Ca4FO12P3Sr",
           "queue": "r2",
           "pid": "928",
-          "elapsed_s": 81468,
-          "elapsed": "22j 37mnt",
+          "elapsed_s": 82374,
+          "elapsed": "22j 52mnt",
           "cpu": "167",
           "bfgs": 7,
-          "scf_total": 126,
-          "last_iter": "iteration # 5 ecut= 80.00 Ry beta= 0.70",
+          "scf_total": 127,
+          "last_iter": "iteration # 6 ecut= 80.00 Ry beta= 0.70",
           "pct": 50,
           "stale": false,
-          "out_mtime": 1795673523
+          "out_mtime": 1795674318
         }
       ]
     },
@@ -121,7 +121,7 @@
       "id": "muse",
       "name": "Muse (VM)",
       "reachable": true,
-      "load": "0.52",
+      "load": "0.26",
       "warn": [],
       "running": [],
       "tasks": [
