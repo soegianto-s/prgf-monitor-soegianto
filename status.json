@@ -1,27 +1,27 @@
 {
-  "updated_at_wib": "2026-11-28 05:32 WIB",
-  "updated_at_unix": 1795818721,
+  "updated_at_wib": "2026-11-28 05:42 WIB",
+  "updated_at_unix": 1795819378,
   "machines": [
     {
       "id": "vps",
       "name": "VPS",
       "reachable": true,
-      "load": "8.34 8.22 7.97 9/1244 3485749",
+      "load": "8.39 8.12 7.96 9/1242 3489634",
       "warn": [],
       "running": [
         {
           "job": "r2_07_Ca10O24P6S",
           "queue": "r2",
           "pid": "2750133",
-          "elapsed_s": 122248,
-          "elapsed": "1 hari 9j 57mnt",
+          "elapsed_s": 122906,
+          "elapsed": "1 hari 10j 8mnt",
           "cpu": "682",
           "bfgs": 23,
-          "scf_total": 353,
-          "last_iter": "iteration # 5 ecut= 80.00 Ry beta= 0.70",
+          "scf_total": 355,
+          "last_iter": "iteration # 7 ecut= 80.00 Ry beta= 0.70",
           "pct": 95,
           "stale": false,
-          "out_mtime": 1795818290
+          "out_mtime": 1795819001
         }
       ]
     },
@@ -29,16 +29,16 @@
       "id": "mac",
       "name": "Mac Mini M1",
       "reachable": true,
-      "load": "4.26 4.32 4.62",
+      "load": "11.23 6.50 5.35",
       "warn": [],
       "running": [
         {
           "job": "r1b_06_Ca3EuFNaO12P3_sp",
           "queue": "r1b",
           "pid": "14566",
-          "elapsed_s": 701178,
-          "elapsed": "8 hari 2j 46mnt",
-          "cpu": "210.3",
+          "elapsed_s": 701836,
+          "elapsed": "8 hari 2j 57mnt",
+          "cpu": "221.0",
           "bfgs": 3,
           "scf_total": 152,
           "last_iter": "iteration # 17 ecut= 80.00 Ry beta= 0.30",
@@ -52,68 +52,55 @@
       "id": "soegi-lab",
       "name": "SOEGI-LAB",
       "reachable": true,
-      "load": "8.11 13.27 15.14 2/306 19872",
+      "load": "14.95 16.12 15.88 17/300 20107",
       "warn": [],
       "running": [
         {
           "job": "r1_11_C2CaLiO6P",
           "queue": "r1",
           "pid": "490",
-          "elapsed_s": 54871,
-          "elapsed": "15j 14mnt",
+          "elapsed_s": 55530,
+          "elapsed": "15j 25mnt",
           "cpu": "1467",
-          "bfgs": 16,
-          "scf_total": 307,
-          "last_iter": "iteration # 16 ecut= 80.00 Ry beta= 0.70",
+          "bfgs": 17,
+          "scf_total": 309,
+          "last_iter": "iteration # 2 ecut= 80.00 Ry beta= 0.70",
           "pct": 95,
           "stale": false,
-          "out_mtime": 1795818443
+          "out_mtime": 1795819179
         }
       ]
     },
     {
       "id": "serverfisika",
       "name": "serverfisika",
-      "reachable": true,
-      "load": "4.04 4.23 5.27 9/138 5918",
-      "warn": [],
-      "running": [
-        {
-          "job": "r3_09",
-          "queue": "r3",
-          "pid": "3243",
-          "elapsed_s": 255622,
-          "elapsed": "2 hari 23j 0mnt",
-          "cpu": "589",
-          "bfgs": 9,
-          "scf_total": 184,
-          "last_iter": "iteration # 4 ecut= 80.00 Ry beta= 0.70",
-          "pct": 64,
-          "stale": false,
-          "out_mtime": 1795818004
-        }
-      ]
+      "reachable": false,
+      "load": null,
+      "warn": [
+        "ssh gagal: exit 1, stdout kosong"
+      ],
+      "running": []
     },
     {
       "id": "gamma",
       "name": "Gamma",
       "reachable": true,
-      "load": "6.77 5.83 5.55 6/369 537144",
+      "load": "6.00 5.88 5.67 5/370 538561",
       "warn": [],
       "running": [
         {
           "job": "r2_23_Ca4FO12P3Sr",
           "queue": "r2",
           "pid": "207892",
-          "elapsed_s": 142825,
-          "elapsed": "1 hari 15j 40mnt",
+          "elapsed_s": 143439,
+          "elapsed": "1 hari 15j 50mnt",
           "cpu": "173",
           "bfgs": 27,
-          "scf_total": 349,
-          "last_iter": "iteration # 2 ecut= 80.00 Ry beta= 0.70",
+          "scf_total": 350,
+          "last_iter": "iteration # 3 ecut= 80.00 Ry beta= 0.70",
           "pct": 95,
           "stale": false,
-          "out_mtime": 1795818580
+          "out_mtime": 1795819059
         }
       ]
     },
@@ -121,7 +108,7 @@
       "id": "muse",
       "name": "Muse (VM)",
       "reachable": true,
-      "load": "0.43",
+      "load": "0.58",
       "warn": [],
       "running": [],
       "tasks": [
@@ -273,18 +260,11 @@
     "r2": {
       "label": "Putaran 2 (r2)",
       "total": 30,
-      "done_count": 9,
+      "done_count": 2,
       "running_count": 2,
-      "pending_count": 19,
+      "pending_count": 26,
       "done": [
-        "r2_01_Ca3O8P2",
         "r2_05_Ca5O12P3",
-        "r2_16_Ca2O6PTb",
-        "r2_17_Ca2CeO8P",
-        "r2_18_CaFMgO4P",
-        "r2_19_Ca2H2O6P",
-        "r2_24_Al2CaO6P",
-        "r2_26_BCaO5P",
         "r2_27_Ca4F3Mg4O17P4"
       ],
       "running": [
@@ -292,6 +272,7 @@
         "r2_23_Ca4FO12P3Sr"
       ],
       "pending": [
+        "r2_01_Ca3O8P2",
         "r2_02_Ca5FO12P3",
         "r2_03_Ca14F3MnO36P9",
         "r2_04_Ca18Eu2O48P12S3",
@@ -304,10 +285,16 @@
         "r2_13_CCa10O27P6",
         "r2_14_CCa5O12P3",
         "r2_15_Ca3HfNa4O24P2S4",
+        "r2_16_Ca2O6PTb",
+        "r2_17_Ca2CeO8P",
+        "r2_18_CaFMgO4P",
+        "r2_19_Ca2H2O6P",
         "r2_20_Ca2O5P",
         "r2_21_Ca3FNaO12P3Sm",
         "r2_22_Ca9F2NdO24P5Si",
+        "r2_24_Al2CaO6P",
         "r2_25_Ca5F4Mg5O21P5",
+        "r2_26_BCaO5P",
         "r2_28_Ca18F3Nd2O48P9Si3",
         "r2_29_Ca9InO28P7",
         "r2_30_Ca10CsO28P7"
@@ -317,38 +304,12 @@
     "r3": {
       "label": "Putaran 3 (r3)",
       "total": 23,
-      "done_count": 1,
-      "running_count": 1,
-      "pending_count": 21,
-      "done": [
-        "r3_host_tcp"
-      ],
-      "running": [
-        "r3_09"
-      ],
-      "pending": [
-        "r3_01",
-        "r3_02",
-        "r3_03",
-        "r3_04",
-        "r3_05",
-        "r3_06",
-        "r3_07",
-        "r3_08",
-        "r3_10",
-        "r3_11",
-        "r3_12",
-        "r3_13",
-        "r3_14",
-        "r3_15",
-        "r3_16",
-        "r3_17",
-        "r3_18",
-        "r3_19",
-        "r3_20",
-        "r3_21",
-        "r3_host_ha"
-      ],
+      "done_count": 0,
+      "running_count": 0,
+      "pending_count": 0,
+      "done": [],
+      "running": [],
+      "pending": [],
       "skipped": []
     }
   }
