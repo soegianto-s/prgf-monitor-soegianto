@@ -1,20 +1,20 @@
 {
-  "updated_at_wib": "2026-11-27 15:42 WIB",
-  "updated_at_unix": 1795768977,
+  "updated_at_wib": "2026-11-27 15:48 WIB",
+  "updated_at_unix": 1795769310,
   "machines": [
     {
       "id": "vps",
       "name": "VPS",
       "reachable": true,
-      "load": "7.69 7.03 7.16 3/1233 3186515",
+      "load": "8.48 7.95 7.54 11/1234 3189397",
       "warn": [],
       "running": [
         {
           "job": "r2_07_Ca10O24P6S",
           "queue": "r2",
           "pid": "2750133",
-          "elapsed_s": 72504,
-          "elapsed": "20j 8mnt",
+          "elapsed_s": 72838,
+          "elapsed": "20j 13mnt",
           "cpu": "680",
           "bfgs": 13,
           "scf_total": 219,
@@ -29,16 +29,16 @@
       "id": "mac",
       "name": "Mac Mini M1",
       "reachable": true,
-      "load": "3.85 4.22 4.63",
+      "load": "4.06 5.36 5.23",
       "warn": [],
       "running": [
         {
           "job": "r1b_06_Ca3EuFNaO12P3_sp",
           "queue": "r1b",
           "pid": "14566",
-          "elapsed_s": 651434,
-          "elapsed": "7 hari 12j 57mnt",
-          "cpu": "230.9",
+          "elapsed_s": 651772,
+          "elapsed": "7 hari 13j 2mnt",
+          "cpu": "224.6",
           "bfgs": 3,
           "scf_total": 136,
           "last_iter": "iteration # 1 ecut= 80.00 Ry beta= 0.30",
@@ -52,22 +52,22 @@
       "id": "soegi-lab",
       "name": "SOEGI-LAB",
       "reachable": true,
-      "load": "16.45 15.95 15.79 17/297 2194",
+      "load": "14.00 15.68 15.83 17/298 2671",
       "warn": [],
       "running": [
         {
           "job": "r1_11_C2CaLiO6P",
           "queue": "r1",
           "pid": "490",
-          "elapsed_s": 5126,
-          "elapsed": "1j 25mnt",
+          "elapsed_s": 5470,
+          "elapsed": "1j 31mnt",
           "cpu": "1514",
           "bfgs": 4,
-          "scf_total": 121,
-          "last_iter": "iteration # 12 ecut= 80.00 Ry beta= 0.70",
+          "scf_total": 122,
+          "last_iter": "iteration # 13 ecut= 80.00 Ry beta= 0.70",
           "pct": 29,
           "stale": false,
-          "out_mtime": 1795768617
+          "out_mtime": 1795769107
         }
       ]
     },
@@ -75,22 +75,22 @@
       "id": "serverfisika",
       "name": "serverfisika",
       "reachable": true,
-      "load": "6.44 5.84 5.01 2/138 21811",
+      "load": "5.79 6.45 5.60 2/137 22429",
       "warn": [],
       "running": [
         {
           "job": "r3_09",
           "queue": "r3",
           "pid": "3243",
-          "elapsed_s": 205832,
-          "elapsed": "2 hari 9j 10mnt",
+          "elapsed_s": 206176,
+          "elapsed": "2 hari 9j 16mnt",
           "cpu": "587",
-          "bfgs": null,
-          "scf_total": 0,
-          "last_iter": "",
-          "pct": 0,
+          "bfgs": 7,
+          "scf_total": 154,
+          "last_iter": "iteration # 1 ecut= 80.00 Ry beta= 0.70",
+          "pct": 50,
           "stale": false,
-          "out_mtime": 0
+          "out_mtime": 1795768483
         }
       ]
     },
@@ -98,15 +98,15 @@
       "id": "gamma",
       "name": "Gamma",
       "reachable": true,
-      "load": "5.33 5.23 5.39 5/341 420643",
+      "load": "5.90 5.65 5.52 5/345 421688",
       "warn": [],
       "running": [
         {
           "job": "r2_23_Ca4FO12P3Sr",
           "queue": "r2",
           "pid": "207892",
-          "elapsed_s": 93028,
-          "elapsed": "1 hari 1j 50mnt",
+          "elapsed_s": 93370,
+          "elapsed": "1 hari 1j 56mnt",
           "cpu": "174",
           "bfgs": 18,
           "scf_total": 271,
@@ -121,7 +121,7 @@
       "id": "muse",
       "name": "Muse (VM)",
       "reachable": true,
-      "load": "1.15",
+      "load": "0.56",
       "warn": [],
       "running": [],
       "tasks": [
@@ -317,10 +317,12 @@
     "r3": {
       "label": "Putaran 3 (r3)",
       "total": 23,
-      "done_count": 0,
+      "done_count": 1,
       "running_count": 1,
-      "pending_count": 22,
-      "done": [],
+      "pending_count": 21,
+      "done": [
+        "r3_host_tcp"
+      ],
       "running": [
         "r3_09"
       ],
@@ -345,8 +347,7 @@
         "r3_19",
         "r3_20",
         "r3_21",
-        "r3_host_ha",
-        "r3_host_tcp"
+        "r3_host_ha"
       ],
       "skipped": []
     }
